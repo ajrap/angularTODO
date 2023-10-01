@@ -8,20 +8,32 @@ import { TodoService } from "src/app/services/todo.service";
   styleUrls: ["./read-all.component.css"],
 })
 export class ReadAllComponent implements OnInit {
+  
+  closed = 0;
+  
   list: Todo[] = [];
+  listFinished: Todo[] = [];
 
   constructor(private service: TodoService) {}
 
   ngOnInit(): void {
     this.findAll();
+    
   }
 
-  
-  findAll(): void{
+  findAll(): void {
     this.service.findAll().subscribe((resposta) => {
-this.list = resposta;
+      resposta.forEach(todo=> {
+        if(todo.finalizado){
+          this.listFinished.push(todo);
+
+        } else{
+          this.list.push(todo);
+        }
+      })
+      
+      this.closed = this.listFinished.length
     })
   }
 
 }
-

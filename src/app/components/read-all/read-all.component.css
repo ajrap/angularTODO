@@ -1,6 +1,21 @@
 .container {
   width: 85%;
   margin: auto;
+  .badge {
+    margin-top: 1.5rem;
+  }
+}
+
+.badge {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge button{
+  margin: auto;
+  width: 100%;
 }
 
 .content {

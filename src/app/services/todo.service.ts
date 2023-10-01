@@ -4,12 +4,15 @@ import { Observable } from 'rxjs';
 import { Todo } from '../models/todo';
 import { environment } from 'src/environments/environment';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class TodoService {
 
-  baseUrl = environment.baseUrl;
+  //baseUrl = environment.baseUrl;
+  baseUrl = 'http://localhost:8081/todos'
 
   constructor(private http: HttpClient) { }
 
