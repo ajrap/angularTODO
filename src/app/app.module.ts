@@ -13,12 +13,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FinalizadosComponent } from './components/finalizados/finalizados.component';
 
 /*https://material.angular.io/components/toolbar/api*/
 /*https://material.angular.io/*/
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ReadAllComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ReadAllComponent, FinalizadosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,7 +30,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

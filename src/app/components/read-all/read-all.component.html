@@ -2,7 +2,7 @@
 
   <div class="badge">
   
-    <button mat-stroked-button color="primary" matBadge= "{{ closed }}">Tasks Finalizadas</button>
+    <button (click)="navegarParaFinalizados()" mat-stroked-button color="primary" matBadge= "{{ closed }}">Tasks Finalizadas</button>
 
   </div>
 
@@ -25,8 +25,8 @@
         <button mat-mini-fab color="accent">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-mini-fab color="warn">
-          <mat-icon>done</mat-icon>
+        <button (click)="delete(item.id)" mat-mini-fab color="warn">
+          <mat-icon>delete</mat-icon>
         </button>
       </div>
     </mat-card>
