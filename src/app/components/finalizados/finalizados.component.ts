@@ -30,4 +30,8 @@ export class FinalizadosComponent implements OnInit {
   voltar(): void {
     this.router.navigate([""]);
   }
+
+ 
+
+
 }
